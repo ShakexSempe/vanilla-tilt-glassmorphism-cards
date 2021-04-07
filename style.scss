@@ -11,21 +11,26 @@ body {
     align-items: center;
     min-height: 100vh;
     background: #161623;
+    // background: url(../19921.jpg);
+    // background-size: cover;
+    // background-position: center;
+    // background-attachment: fixed;
 }
 
 body::before {
     content: '';
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background: linear-gradient(#ff0000, #f0f);
+    
     clip-path: circle(30% at right 70%)
 }
 body::after {
     content: '';
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -42,6 +47,7 @@ body::after {
     max-width: 1200px;
     flex-wrap: wrap;
     z-index: 1;
+    
 
     .card {
         position: relative;
@@ -58,20 +64,21 @@ body::after {
         border-top: 1px solid rgba(255, 255, 255, .5);
         border-left: 1px solid rgba(255, 255, 255, .5);
         backdrop-filter: blur(5px);
-        
-        // .content:hover {
-        //     transform:translateY(0px);
-        //     opacity: 1;
-        // }
+        transform-style: preserve-3d;
+        transform: perspective(1000px);
 
+        
         .content {
+            transform: translateZ(20px);        
             padding: 20px;
             text-align: center;
             // transform: translateY(100px);
             // opacity: 0;
             transition: .5s;
+            
 
             h2 {
+
                 position: absolute;
                 top: -80px;
                 right: 30px;
@@ -109,6 +116,7 @@ body::after {
         
 
     }
+
 }
 
 @import 'mobile';

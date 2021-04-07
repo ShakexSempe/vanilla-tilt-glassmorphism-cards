@@ -14,7 +14,7 @@ body {
 
 body::before {
   content: '';
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -24,7 +24,7 @@ body::before {
 
 body::after {
   content: '';
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -54,8 +54,11 @@ body::after {
     overflow: hidden;
     border-top: 1px solid rgba(255, 255, 255, 0.5);
     border-left: 1px solid rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(5px); }
+    backdrop-filter: blur(5px);
+    transform-style: preserve-3d;
+    transform: perspective(1000px); }
     .container .card .content {
+      transform: translateZ(20px);
       padding: 20px;
       text-align: center;
       transition: .5s; }
