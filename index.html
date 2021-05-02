@@ -7,32 +7,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tilt Cards Glassmorphism</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
 </head>
 
 <body>
     <div class="container">
-        <div class="card tilt">
+        <div class="card tilt" data-tilt>
             <div class="content">
                 <h2>HTML</h2>
-                <h3>Card One</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, similique!</p>
-                <a href="#">Read More</a>
+                <h3>HTML 5</h3>
+                <p>Applied Visual Design</p>
+                <p>Semantic Markup</p>
+                <a href=""><i class="fab fa-html5"></i></a>
             </div>
         </div>
         <div class="card tilt">
             <div class="content">
                 <h2>CSS</h2>
-                <h3>Card Two</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, similique!</p>
-                <a href="#">Read More</a>
+                <h3>CSS</h3>
+                <ul id="css-list">
+                    <li>Animations</li>
+                    <li>Grid Layout</li>
+                    <li>Flexbox</li>
+                    <li>Responsive Web Design</li>
+                </ul>
+                <a href="https://shakexsempe.github.io/parallex-scrolling-effect/" target="_blank"><i class="fab fa-css3"></i></a>
             </div>
         </div>
         <div class="card tilt" >
             <div class="content">
-                <h2>Javascript</h2>
-                <h3>Card Three</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, similique!</p>
-                <a href="#">Read More</a>
+                <h2 id="js" data-tilt>Javascript</h2>
+                <h3>Javascript</h3>
+                <p>ES6 fundementals</p>
+                <a id="fcc" href="https://www.freecodecamp.org/boitumelo-sempe" target="_blank"><i class="fab fa-free-code-camp"></i></a>
             </div>
         </div>
     </div>
@@ -40,10 +47,11 @@
     <script type="text/javascript" src="vanilla-tilt.js"></script>
     <script type="text/javascript">
         VanillaTilt.init(document.querySelectorAll(".card"), {
-            max: 25,
+            max: 20,
             speed: 400, 
             glare: false,
-        });;
+
+        });
     </script>
 </body>
 
